@@ -12,7 +12,7 @@
     --grey: #C0C0C0;
     --black: #000000;
     --textshadow: 2px 2px 0px black;
-    --pixel-font: 'Press Start 2P', '', 'UniFont';
+    --pixel-font: '', '', '宋体';
 }
 
 body {
@@ -20,6 +20,7 @@ body {
     font-family: var(--pixel-font);
     color: var(--black);
     margin: 5%;
+    font-size: 16px;
 }
 
 h1,
@@ -36,7 +37,7 @@ h6 {
 
 
 h2 {
-    font-size: medium;
+    font-size: 16px;
 }
 
 .window {
@@ -61,6 +62,7 @@ h2 {
     right: 5px;
     min-width: 90%;
     text-transform: uppercase;
+    font-family: 'Press Start 2P';
 }
 
 .footer {
@@ -69,6 +71,8 @@ h2 {
     font-size: 16px;
     color: var(--white);
     text-shadow: var(--textshadow);
+    font-family: 'Press Start 2P';
+
 }
 
 .img-footer {
@@ -79,10 +83,9 @@ h2 {
 
 .image-container {
     margin: 0 10px;
-    /* 设置图片之间的间距 */
 }
 
 .limited-size {
-    width: 100px;
-    height: 50px;
+    width: 64px;
+    height: 32px;
 }
