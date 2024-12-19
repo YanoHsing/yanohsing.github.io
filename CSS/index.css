@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+    font-family: 'UniFont';
+    src: url('/RES/unifont.ttf') format('truetype');
+}
+
+:root {
+    --blueS: #5797c1;
+    --blueL: #000080;
+    --white: #ffffff;
+    --grey: #C0C0C0;
+    --black: #000000;
+    --textshadow: 2px 2px 0px black;
+    --pixel-font: 'Press Start 2P', '宋体', 'UniFont';
+}
+
+body {
+    background-color: var(--blueS);
+    font-family: var(--pixel-font);
+    color: var(--black);
+    margin: 5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--pixel-font);
+    color: var(--blueL);
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+
+h2 {
+    font-size: medium;
+}
+
+.window {
+    width: 80%;
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 1% 5%;
+    border: 5px solid var(--blueL);
+    background-color: var(--white);
+    box-shadow: 0px 0px 0px var(--grey);
+    line-height: 1.2;
+}
+
+.title-bar {
+    background-color: var(--blueL);
+    color: var(--white);
+    text-align: center;
+    padding: 5px;
+    font-size: 24px;
+    height: fit-content;
+    left: 5px;
+    right: 5px;
+    min-width: 90%;
+    text-transform: uppercase;
+}
+
+.footer {
+    font-family: var(--pixel-font);
+    text-align: center;
+    font-size: 16px;
+    color: var(--white);
+    text-shadow: var(--textshadow);
+}

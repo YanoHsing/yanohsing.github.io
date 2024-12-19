@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Test</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="icon" href="RES/icon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="window">
+            <div class="title-bar">
+                my blog. exe
+            </div>
+            <h1>Hello, World!
+            </h1>
+            <p>Welcom to HSING's blog</p>
+        </div>
+    </header>
+    <main>
+        <div class="window">
+            <h1>Redirect Test</h1>
+            <p>If you want to go to <span style="color:red;">Baidu.com </span>click the button below</p>
+            </span>
+            </p>
+            <h2><a href="https://www.baidu.com">CLICK ME</a></h2>
+        </div>
+        <!--
+        <div class="window">
+            <h1>中文测试</h1>
+            <p>点击以下链接跳转至 <span style="color:red;">Baidu.com </span>感觉看起来格格不入，真麻烦，，，</p>
+            </span>
+            </p>
+            <h2><a href="https://www.baidu.com">CLICK ME</a></h2>
+        </div>
+        -->
+        <div class="window">
+            <h1>Slide Test</h1>
+            <p>Click the button below to see my SLIDES</p>
+            <h2><a href="/POST/slidetest/">CLICK ME</a></h2>
+        </div>
+        <div class="window">
+            <div class="title-bar">
+                EXIT
+            </div>
+            <h1>
+
+            </h1>
+            <p>
+                你真的要离开吗？
+            </p>
+        </div>
+    </main>
+    <div class="footer">
+        <p>&copy; 2024 Blog Test. All Rights Didn't Reserved Yet. </p>
+    </div>
+</body>
+
+</html>
+<script>
+    async function getRandomLine() {
+        const response = await fetch('click.txt');
+        const text = await response.text();
+        const lines = text.split('\n');
+        return lines[Math.floor(Math.random() * lines.length)];
+    }
+
+    document.addEventListener('click', async function (event) {
+        const window = document.createElement('div');
+        window.className = 'window';
+
+        // Create title-bar
+        const titleBar = document.createElement('div');
+        titleBar.className = 'title-bar';
+        titleBar.textContent = 'POP.EXE';
+        titleBar.style.fontSize = '12px';
+        titleBar.style.minwidth = 0.9 * window.clientWidth + 'px';
+        // Create content div
+        const content = document.createElement('div');
+        content.textContent = await getRandomLine();
+
+        // Append elements
+        window.appendChild(titleBar);
+        window.appendChild(content);
+
+        window.style.position = 'fixed';
+        window.style.left = (event.clientX + 10) + 'px';
+        window.style.top = (event.clientY - 10) + 'px';
+        window.style.pointerEvents = 'none';
+        window.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+        window.style.margin = '0';
+        window.style.color = 'black';
+        window.style.width = 'auto';
+        window.style.padding = '10px';
+        window.style.maxWidth = 0.3 * document.body.clientWidth + 'px';
+        document.body.appendChild(window);
+
+        setTimeout(function () {
+            document.body.removeChild(window);
+        }, 500);
+    });
+</script>
