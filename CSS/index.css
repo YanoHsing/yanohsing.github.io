@@ -1,25 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-@font-face {
-    font-family: 'UniFont';
-    src: url('/RES/unifont.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC');
 
 :root {
-    --blueS: #5797c1;
-    --blueL: #000080;
+    --body-bg: #6699dd;
+    --h3-blue: #0000aa;
     --white: #ffffff;
     --grey: #C0C0C0;
     --black: #000000;
     --textshadow: 2px 2px 0px black;
-    --pixel-font: '', '', '宋体';
+    --global-font: '宋体', 'Noto Serif SC';
+    --fixed-bar-height: 34px;
+    --code-background: #f0f0f0;
+    --border-color: #bababa;
+    --h1-bg-gradient: linear-gradient(to right, #002244, #b3b3f4);
+    --h2-bg-gradient: linear-gradient(to right, #cfcfcf, #ffffff);
 }
 
 body {
-    background-color: var(--blueS);
-    font-family: var(--pixel-font);
+    background-color: var(--body-bg);
+    font-family: var(--global-font);
     color: var(--black);
     margin: 5%;
+    font-size: 16px;
+    padding-top: var(--fixed-bar-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    font-family: var(--global-font);
+    color: var(--h1-blueL);
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+h2 {
     font-size: 16px;
 }
 
@@ -28,64 +46,193 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    font-family: var(--pixel-font);
-    color: var(--blueL);
-    max-width: 100%;
-    word-wrap: break-word;
-}
-
-
-h2 {
-    font-size: 16px;
-}
-
-.window {
+h6,
+p,
+ul,
+ol,
+pre,
+.mathjax-block,
+.md-end-block,
+.md-math-block,
+.md-rawblock,
+div,
+blockquote,
+.footnotes-area {
     width: 80%;
     max-width: 750px;
-    margin: 20px auto;
-    padding: 1% 5%;
-    border: 5px solid var(--blueL);
+    margin: 0 auto;
+    border: 5px solid var(--border-color);
+    border-width: 0px 5px 0px 5px;
+    padding: 10px;
     background-color: var(--white);
-    box-shadow: 0px 0px 0px var(--grey);
-    line-height: 1.2;
 }
 
-.title-bar {
-    background-color: var(--blueL);
+.md-math-container,
+.footnote-line ，li {
+    border-width: 0px 0px 0px 0px;
+}
+
+h1 {
+    border: 5px solid var(--border-color);
+    padding: 5px 10px;
+    background: var(--h1-bg-gradient);
+    font-size: 20px;
     color: var(--white);
-    text-align: center;
-    padding: 5px;
-    font-size: 24px;
-    height: fit-content;
-    left: 5px;
-    right: 5px;
-    min-width: 90%;
-    text-transform: uppercase;
-    font-family: 'Press Start 2P';
+    margin-top: 50px;
+    position: relative;
 }
 
-.footer {
-    font-family: var(--pixel-font);
-    text-align: center;
-    font-size: 16px;
-    color: var(--white);
-    text-shadow: var(--textshadow);
-    font-family: 'Press Start 2P';
+h1:first-child {
+    margin-top: 0px;
+}
+
+h2 {
+    border: 5px solid var(--border-color);
+    padding: 5px 10px;
+    background: var(--h2-bg-gradient);
+    background-color: var(--white);
+    font-size: 18px;
+    color: var(--black);
+    border-width: 0px 5px 0px 5px;
+}
+
+h3 {
+    font-style: italic;
+    text-decoration: underline;
+    color: var(--h3-blue);
+}
+
+h4,
+h5,
+h6 {
+    font-style: bold;
+}
+
+p {
+    border: 5px solid var(--border-color);
+    border-width: 0px 5px 0px 5px;
+    padding: 10px;
+    background-color: var(--white);
+}
+
+*:has(+ h1),
+p:last-child,
+p:has(+ .footnotes-area) {
+    border-width: 0px 5px 5px 5px;
+}
+
+pre,
+blockquote {
+    font-family: 'Courier New';
+    background-color: var(--code-background);
+    box-shadow: inset 1 1 5px rgb(0, 0, 0);
+}
+
+li p,
+ul p,
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+    border-width: 0px 0px 0px 0px !important;
+    display: inline-block;
+}
+
+ol,
+ul,
+li {
+    list-style-position: inside;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+ul:has(> ul),
+ul:has(> ol) {
+    list-style-position: inside;
+    list-style-type: square;
+    margin-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding: 0px;
 
 }
 
-.img-footer {
+ol:has(> ol),
+ol:has(> ul) {
+    list-style-position: inside;
+    list-style-type: decimal;
+    margin-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+
+
+code {
+    font-family: 'Courier New';
+}
+
+blockquote p {
+    border-width: 0px 0px 0px 0px !important;
+    background-color: var(--code-background);
+}
+
+.footnotes-area {
+    margin-top: 50px;
+    border-width: 5px 5px 5px 5px;
+    position: relative;
+}
+
+.footnotes-area::after {
+    content: "注释";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: var(--border-color);
+}
+
+.footnotes-area hr {
+    display: none;
+}
+
+.footnote-line {
+    border-width: 0px 0px 0px 0px;
+}
+
+.mathjax-block.md-end-block.md-math-block.md-rawblock {
+    text-align: center;
+}
+
+.fixed-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: var(--fixed-bar-height);
+    background-color: #a1a1a1;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 0 10px;
+    border: none;
 }
 
-.image-container {
-    margin: 0 10px;
+.fixed-bar button {
+    background-color: var(--grey);
+    color: var(--black);
+    border: none;
+    padding: 1px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.limited-size {
-    width: 64px;
-    height: 32px;
+.fixed-bar button:hover {
+    background-color: var(--grey);
+    color: var(--white);
 }

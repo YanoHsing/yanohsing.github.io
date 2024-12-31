@@ -1,97 +1,40 @@
-<!DOCTYPE html>
-<html lang="zh">
-
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>HSING</title>
+</head>
+<body>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Test</title>
-    <link rel="stylesheet" href="CSS/index.css">
-    <link rel="icon" href="RES/icon.ico" type="image/x-icon">
+    <title>HSING</title>
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="icon" href="/RES/icon.ico" type="image/x-icon">
 </head>
+<div class="fixed-bar">
+        <button onclick="location.href='/index.html'">HOME</button>
+        <button onclick="window.scrollTo(0, 0)">TOP</button>
+</div>
+<h1 id='update-2025-01-01'>UPDATE 2025-01-01</h1>
+<h2 id='首先新年快乐'>首先，新年快乐！</h2>
+<p>更新主要内容有：</p>
+<ul>
+<li>全新的层叠样式表！<sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup></li>
+<li>没了</li>
 
-<body>
-    <header>
-        <div class="window">
-            <div class="title-bar">
-                my blog. exe
-            </div>
-            <h1>Hello, World!
-            </h1>
-            <p>Welcom to HSING's blog! </p>
-            <p>选不出一个好的字体来，，， </p>
-        </div>
-    </header>
-    <main>
-        <div class="window">
-            <h1>幻灯片合集</h1>
-            <p>以下是我的幻灯片合集</p>
-            <h2><a href="/POST/slide/">CLICK ME</a></h2>
-        </div>
-        <div class="window">
-            <h1>关于我</h1>
-            <p>如你所见</p>
-            <h2><a href="/POST/aboutme/">CLICK ME</a></h2>
-        </div>
-    </main>
+</ul>
+<h1 id='用来测试的页面'>用来测试的页面</h1>
+<h2 id='如你所见本站建设中'>如你所见，本站建设中，，，</h2>
+<h3 id='未完成'>未完成</h3>
+<p><a href='/POST/test/index.html'>点我跳转</a></p>
+<h1 id='幻灯片'>幻灯片</h1>
+<h3 id='以下是幻灯片合集'>以下是幻灯片合集</h3>
+<p><a href='/POST/slide/index.html'>点我跳转</a></p>
+<h1 id='关于我'>关于我</h1>
+<h3 id='无聊至极'>无聊至极</h3>
+<p><a href='/POST/me/index.html'>点我跳转</a></p>
 
-    <div class="footer">
-        <div class="img-footer">
-            <a href="https://code.visualstudio.com/" target="_blank">
-                <div class="image-container">
-                    <img src="RES/index/madeWith.png" alt="Made with Visual Studio Code" class="limited-size">
-                </div>
-            </a>
-            <a href="https://pages.github.com/" target="_blank">
-                <div class="image-container">
-                    <img src="RES/index/poweredBy.png" alt="Powered By Github Pages" class="limited-size">
-                </div>
-            </a>
-        </div>
-        <p>&copy; 2024 Blog Test. All Rights Didn't Reserved Yet. </p>
-    </div>
-</body>
-
+<div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> 其实就是CSS <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a></div></div></body>
 </html>
-<script>
-    async function getRandomLine() {
-        const response = await fetch('click.txt');
-        const text = await response.text();
-        const lines = text.split('\n');
-        return lines[Math.floor(Math.random() * lines.length)];
-    }
-
-    document.addEventListener('click', async function (event) {
-        const window = document.createElement('div');
-        window.className = 'window';
-
-        // Create title-bar
-        const titleBar = document.createElement('div');
-        titleBar.className = 'title-bar';
-        titleBar.textContent = 'POP-UP.EXE';
-        titleBar.style.fontSize = '12px';
-        titleBar.style.minwidth = 0.9 * window.clientWidth + 'px';
-        // Create content div
-        const content = document.createElement('div');
-        content.textContent = await getRandomLine();
-
-        // Append elements
-        window.appendChild(titleBar);
-        window.appendChild(content);
-
-        window.style.position = 'fixed';
-        window.style.left = (event.clientX + 10) + 'px';
-        window.style.top = (event.clientY - 10) + 'px';
-        window.style.pointerEvents = 'none';
-        window.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
-        window.style.margin = '0';
-        window.style.color = 'black';
-        window.style.width = 'auto';
-        window.style.padding = '10px';
-        window.style.maxWidth = 0.3 * document.body.clientWidth + 'px';
-        document.body.appendChild(window);
-
-        setTimeout(function () {
-            document.body.removeChild(window);
-        }, 500);
-    });
-</script>
