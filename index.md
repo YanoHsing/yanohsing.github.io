@@ -16,34 +16,49 @@ charset: "utf-8"
         <button onclick="window.scrollTo(0, 0)">TOP</button>
 </div>
 
-# UPDATE 2025-01-01
+# UPDATE 2025-02-16
 
-## 首先，新年快乐！
+## 斥巨资购买域名
 
 更新主要内容有：
 
-- 全新的层叠样式表！[^1]
+- 重新排版
 - 没了
 
-# 用来测试的页面
+未来将会迎来大修：
 
-## 如你所见，本站建设中，，，
+- 套用HEXO模板
+- 写点什么东西
+- 没了
 
-### 未完成
+### 往期更新
+
+[点我跳转](/POST/update/index.html)
+
+# 目录
+
+## 用来测试的页面
+
+### 如你所见，本站建设中，，，
+
+## 测试
 
 [点我跳转](/POST/test/index.html)
 
-
-# 幻灯片
+## 幻灯片
 
 ### 以下是幻灯片合集
 
 [点我跳转](/POST/slide/index.html)
 
+## 博客
+
+### 0个人在意
+
+[点我跳转](/POST/blog/index.html)
+
 # 关于我
 
-### 无聊至极
+## 无聊至极
 
 [点我跳转](/POST/me/index.html)
-
-[^1]: 其实就是CSS
