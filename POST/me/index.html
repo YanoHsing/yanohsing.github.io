@@ -23,7 +23,30 @@
 <p>本科在读，写毕业论文，找工作，大概还有搞这个网站吧？以及混吃等死，，，</p>
 <h3 id='喜欢玩的游戏有'>喜欢玩的游戏有</h3>
 <p>星露谷物语，Minecraft，植物大战僵尸，植物大战僵尸2，泰拉瑞亚，以撒的结合，Brotato，吸血鬼幸存者，，，</p>
-<h3 id='联系方式'>联系方式</h3>
+<h2 id='碎碎念'>碎碎念</h2>
+<div id="talk">电子人会梦见仿生羊吗？</div>
+<h1 id='联系方式'>联系方式</h1>
 <p><a href='mailto:hsingyu.yen@icloud.com'>电子邮箱</a></p>
+<script>
+    // 函数：从文件中读取随机行
+    function getRandomLineFromFile(filePath, callback) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(text => {
+                const lines = text.split('\n');
+                const randomLine = lines[Math.floor(Math.random() * lines.length)];
+                callback(randomLine);
+            })
+            .catch(error => console.error("读取文件时出错:", error));
+    }
+    // 给点击元素添加事件监听
+    document.getElementById("talk").addEventListener("click", function () {
+        // 使用文件路径 test.txt 来读取随机一行
+        getRandomLineFromFile('/POST/me/talk.txt', function (randomText) {
+            document.getElementById("talk").textContent = randomText;
+        });
+    });
+</script>
+<p> </p>
 </body>
 </html>

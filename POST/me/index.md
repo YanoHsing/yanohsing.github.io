@@ -30,6 +30,32 @@ charset: "utf-8"
 
 星露谷物语，Minecraft，植物大战僵尸，植物大战僵尸2，泰拉瑞亚，以撒的结合，Brotato，吸血鬼幸存者，，，
 
-### 联系方式
+## 碎碎念
+
+<div id="talk">电子人会梦见仿生羊吗？</div>
+
+# 联系方式
 
 [电子邮箱](mailto:hsingyu.yen@icloud.com)
+
+<script>
+    // 函数：从文件中读取随机行
+    function getRandomLineFromFile(filePath, callback) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(text => {
+                const lines = text.split('\n');
+                const randomLine = lines[Math.floor(Math.random() * lines.length)];
+                callback(randomLine);
+            })
+            .catch(error => console.error("读取文件时出错:", error));
+    }
+    // 给点击元素添加事件监听
+    document.getElementById("talk").addEventListener("click", function () {
+        // 使用文件路径 test.txt 来读取随机一行
+        getRandomLineFromFile('/POST/me/talk.txt', function (randomText) {
+            document.getElementById("talk").textContent = randomText;
+        });
+    });
+</script>
+ 

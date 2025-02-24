@@ -16,19 +16,13 @@ charset: "utf-8"
         <button onclick="window.scrollTo(0, 0)">TOP</button>
 </div>
 
-# UPDATE 2025-02-16
+# UPDATE 2025-02-24
 
-## 斥巨资购买域名
+## ABOUT ME UPDATED
 
 更新主要内容有：
 
-- 重新排版
-- 没了
-
-未来将会迎来大修：
-
-- 套用HEXO模板
-- 写点什么东西
+- 花里胡哨的东西
 - 没了
 
 ### 往期更新
