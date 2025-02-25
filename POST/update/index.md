@@ -16,6 +16,16 @@ charset: "utf-8"
         <button onclick="window.scrollTo(0, 0)">TOP</button>
 </div>
 
+# UPDATE 2025-02-24
+
+## ABOUT ME UPDATED
+
+更新主要内容有：
+
+- 花里胡哨的东西
+- 没了
+
+
 # UPDATE 2025-02-16
 
 ## 斥巨资购买域名
@@ -40,5 +50,7 @@ charset: "utf-8"
 
 - 全新的层叠样式表！[^1]
 - 没了
+
+
 
 [^1]: 其实就是CSS

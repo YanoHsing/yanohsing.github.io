@@ -20,6 +20,12 @@ charset: "utf-8"
 
 ## 其实压根没什么幻灯片
 
-某种占位符
+幻灯片
 
 [点击跳转](/POST/slide/slidetest/index.html)
+
+## 杨爱民选集
+
+哈哈你这傻瓜，，，
+
+[点我查看](/FILE/杨爱民选集.pdf)
