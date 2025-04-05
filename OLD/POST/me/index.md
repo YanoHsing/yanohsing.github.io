@@ -1,10 +1,8 @@
-<!doctype html>
-<html>
-<head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>测试</title>
-</head>
-<body>
+---
+title: 测试
+charset: "utf-8"
+---
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,21 +10,42 @@
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="icon" href="/RES/icon.ico" type="image/x-icon">
 </head>
+
 <div class="fixed-bar">
         <button onclick="location.href='/index.html'">HOME</button>
         <button onclick="window.scrollTo(0, 0)">TOP</button>
 </div>
-<h1 id='关于我'>关于我</h1>
-<h2 id='总而言之'>总而言之</h2>
-<p>没什么好说的，，，</p>
-<h3 id='目前在干什么'>目前在干什么</h3>
-<p>本科在读，写毕业论文，找工作，大概还有搞这个网站吧？以及混吃等死，，，</p>
-<h3 id='喜欢玩的游戏有'>喜欢玩的游戏有</h3>
-<p>星露谷物语，Minecraft，植物大战僵尸，植物大战僵尸2，泰拉瑞亚，以撒的结合，Brotato，吸血鬼幸存者，，，</p>
-<h2 id='碎碎念'>碎碎念</h2>
+
+# 关于我
+
+## 总而言之
+
+没什么好说的，，，
+
+### 目前在干什么
+
+本科在读，写毕业论文，~~找工作（目前好像不用急着找工作了）~~，大概还有继续搞这个网站，，，
+
+### 喜欢玩的游戏有
+
+单机游戏：
+
+- 星露谷物语，Minecraft，植物大战僵尸，植物大战僵尸2，泰拉瑞亚，以撒的结合，Brotato，吸血鬼幸存者，，，
+
+在线游戏：
+
+- 基本上没有吧，，，
+
+以上，，，
+
+## 碎碎念
+
 <div id="talk">电子人会梦见仿生羊吗？</div>
-<h1 id='联系方式'>联系方式</h1>
-<p><a href='mailto:hsingyu.yen@icloud.com'>电子邮箱</a></p>
+
+# 联系方式
+
+[电子邮箱](mailto:hsingyu.yen@icloud.com)
+
 <script>
     // 函数：从文件中读取随机行
     function getRandomLineFromFile(filePath, callback) {
@@ -47,6 +66,4 @@
         });
     });
 </script>
-<p> </p>
-</body>
-</html>
+ 
