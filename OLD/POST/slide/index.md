@@ -22,7 +22,7 @@ charset: "utf-8"
 
 幻灯片
 
-[点击跳转](/POST/slide/slidetest/index.html)
+[点击跳转](/OLD/POST/slide/slidetest/index.html)
 
 ## 杨爱民选集
 
